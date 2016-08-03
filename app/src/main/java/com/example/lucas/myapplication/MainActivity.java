@@ -140,6 +140,14 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    public void setFragmentAnime() {
+        BlankFragment blankFragment = new BlankFragment();
+        FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+        fragmentTransaction.replace(R.id.frame, blankFragment);
+        fragmentTransaction.addToBackStack(null);
+        fragmentTransaction.commit();
+    }
+
 //    private ActionBarDrawerToggle setupDrawerToggle() {
 //        return new ActionBarDrawerToggle(this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
 //    }
